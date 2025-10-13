@@ -1,4 +1,4 @@
-        /* Reset básico */
+/* Reset básico */
         * {
             margin: 0;
             padding: 0;
@@ -725,9 +725,24 @@
                 padding: 6px;
             }
 
+            /* Tabs: Solo mostrar iconos en móviles */
             .tabs__button {
-                padding: 10px 14px;
-                font-size: 12px;
+                padding: 12px 16px;
+                font-size: 20px;
+                min-width: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Ocultar el texto dentro de los botones de tabs */
+            .tabs__button {
+                font-size: 0;
+            }
+
+            /* Mostrar solo los emojis/iconos con tamaño apropiado */
+            .tabs__button::before {
+                font-size: 20px;
             }
 
             .download-section {
@@ -755,5 +770,11 @@
             .image-gallery__thumbnails {
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
+            }
+
+            /* Asegurar que tabs sean más compactos en móviles muy pequeños */
+            .tabs__button {
+                padding: 10px 12px;
+                min-width: 44px;
             }
         }
